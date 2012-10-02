@@ -1,0 +1,3 @@
+class augeas {
+  package { 'augeas': }
+}
