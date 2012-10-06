@@ -4,5 +4,7 @@
 #
 #   include augeas
 class augeas {
-  package { 'augeas': }
+  package { 'boxen/brews/augeas':
+    ensure => '0.8.1-boxen2'
+  }
 }
