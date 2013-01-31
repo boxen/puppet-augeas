@@ -3,7 +3,7 @@ require 'formula'
 class Augeas < Formula
   url 'http://augeas.net/download/augeas-0.8.1.tar.gz'
   homepage 'http://augeas.net'
-  md5 '62d47bdc60e175f93aed3b81cb8e2785'
+  sha1 'b76b381a4a006e362829a2a384c42108e4f910cd'
   version '0.8.1-boxen2'
 
   depends_on 'pkg-config' => :build
