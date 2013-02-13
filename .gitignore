@@ -1,7 +1,7 @@
-/.bundle/
+/.bundle
 /.ruby-version
-/bin/
-/spec/fixtures/modules/
-/spec/fixtures/.librarian/
-/spec/fixtures/.tmp/
-/spec/fixtures/vendor/
+/spec/fixtures/.librarian
+/spec/fixtures/.tmp
+/spec/fixtures/Puppetfile.lock
+/spec/fixtures/modules
+/spec/fixtures/vendor
