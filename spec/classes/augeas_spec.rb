@@ -11,7 +11,12 @@ describe 'augeas' do
   it do
     should include_class('homebrew')
 
+    should contain_homebrew__formula('pkg-config')
     should contain_homebrew__formula('augeas')
+
+    should contain_package('boxen/brews/pkg-config').with({
+      :ensure => '0.28-boxen1'
+    })
 
     should contain_package('boxen/brews/augeas').with({
       :ensure => '0.8.1-boxen2'
