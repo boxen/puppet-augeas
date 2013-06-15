@@ -18,14 +18,6 @@ class augeas {
           }
         }
 
-        '10.9': {
-          package { 'augeas': }
-
-          homebrew::formula { 'augeas':
-            ensure => absent
-          }
-        }
-
         default: {
           package { 'augeas': }
         }
