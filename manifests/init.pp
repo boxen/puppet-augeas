@@ -4,17 +4,35 @@
 #
 #   include augeas
 class augeas {
-  require homebrew
+  case $::operatingsystem {
+    'Darwin': {
+      include homebrew
+      require pkgconfig
 
-  # required to build ruby-augeas
-  homebrew::formula { 'pkg-config': }
-  homebrew::formula { 'augeas': }
+      case $::macosx_productversion_major {
+        '10.8': {
+          homebrew::formula { 'augeas': }
 
-  package { 'boxen/brews/pkg-config':
-    ensure => '0.28-boxen1'
-  }
+          package { 'boxen/brews/augeas':
+            ensure => '0.8.1-boxen2'
+          }
+        }
 
-  package { 'boxen/brews/augeas':
-    ensure => '0.8.1-boxen2'
+        '10.9': {
+          package { 'augeas': }
+
+          homebrew::formula { 'augeas':
+            ensure => absent
+          }
+        }
+
+        default: {
+          package { 'augeas': }
+        }
+      }
+
+    default: {
+      package { 'augeas': }
+    }
   }
 }
