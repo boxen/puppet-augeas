@@ -30,6 +30,7 @@ class augeas {
           package { 'augeas': }
         }
       }
+    }
 
     default: {
       package { 'augeas': }
