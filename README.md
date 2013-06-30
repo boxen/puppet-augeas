@@ -1,5 +1,7 @@
 # Augeas Puppet Module for Boxen
 
+[![Build Status](https://travis-ci.org/boxen/puppet-augeas.png?branch=master)](https://travis-ci.org/boxen/puppet-augeas)
+
 Install the [Augeas](http://augeas.net) configuration editing tool.
 
 ## Usage
