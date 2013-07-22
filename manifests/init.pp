@@ -7,7 +7,11 @@ class augeas {
   case $::operatingsystem {
     'Darwin': {
       include homebrew
-      require pkgconfig
+      include pkgconfig
+
+      Package {
+        require => Class['pkgconfig']
+      }
 
       case $::macosx_productversion_major {
         '10.8': {
