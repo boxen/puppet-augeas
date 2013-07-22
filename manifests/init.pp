@@ -9,15 +9,12 @@ class augeas {
       include homebrew
       include pkgconfig
 
-      Package {
-        require => Class['pkgconfig']
-      }
-
       case $::macosx_productversion_major {
         '10.8': {
           homebrew::formula { 'augeas': }
 
-          package { 'boxen/brews/augeas':
+          package { 'augeas':
+            name   => 'boxen/brews/augeas',
             ensure => '0.8.1-boxen2'
           }
         }
@@ -31,5 +28,9 @@ class augeas {
     default: {
       package { 'augeas': }
     }
+  }
+
+  Package <| title == 'augeas' |> {
+    require +> Class['pkgconfig']
   }
 }
