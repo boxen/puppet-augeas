@@ -1,7 +1,7 @@
 require 'formula'
 
 class Augeas < Formula
-  url 'http://augeas.net/download/augeas-0.8.1.tar.gz'
+  url 'http://download.augeas.net/archive/augeas-0.8.1.tar.gz'
   homepage 'http://augeas.net'
   sha1 'b76b381a4a006e362829a2a384c42108e4f910cd'
   version '0.8.1-boxen2'
