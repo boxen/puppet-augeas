@@ -1,10 +1,10 @@
 require 'formula'
 
 class Augeas < Formula
-  url 'http://download.augeas.net/archive/augeas-0.8.1.tar.gz'
+  url 'http://download.augeas.net/augeas-1.2.0.tar.gz'
   homepage 'http://augeas.net'
-  sha1 'b76b381a4a006e362829a2a384c42108e4f910cd'
-  version '0.8.1-boxen2'
+  sha1 'ab63548ae5462d7b3dc90e74311b8e566ba22485'
+  version '1.2.0-boxen2'
 
   depends_on 'pkg-config' => :build
 
